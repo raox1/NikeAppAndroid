@@ -33,12 +33,11 @@ fun SplashScreen(navController: NavHostController) {
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize()
     ) {
-        if (isActive) {
-            // Just to show the transition logic; this screen will change soon
-            Text("Navigating...", fontSize = 24.sp, fontWeight = FontWeight.Bold)
-        } else {
+        if (!isActive) {
             Text("NIKE", fontSize = 32.sp, fontWeight = FontWeight.Bold, color = Color.Black)
         }
+        // No UI is displayed during the transition logic once isActive is true
     }
+
 }
 
